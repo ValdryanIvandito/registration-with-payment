@@ -1,38 +1,54 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Registration With Payment Gateway
 
-## Getting Started
+I created this simple web application to demonstrate my abilities and knowledge after learning to become a Fullstack Developer for 8 months. This application is a registration form which is equipped with a payment feature via the Midtrans payment gateway (https://midtrans.com/) and email notification as confirmation if the payment is successful.
 
-First, run the development server:
+# The main Techstack that I used to build this application is as follows:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+- Next.js
+- TailwindCSS
+- The main modules that I use are as follows:
+  - Midtrans clients
+  - Nodemailer
+  - Validator.js
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+# The features of this web application are as follows:
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+- Responsive Design, the UI will automatically adapt to mobile, tablet and desktop screens.
+- Validate the input format of email and phone number.
+- Payment feature via GoPay QRIS, BCA, BRI, BNI and Mandiri Bank Virtual Accounts.
+- Email notification after successful payment.
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+# How to use this web application:
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+1. Go to https://registration-with-payment-gateway.vercel.app/
+2. Enter First Name, Last Name, Email and Phone Number on the form.
+3. Select the payment method (for simulation it is recommended to choose BCA VA).
+4. If you are sure, click Submit then wait until the payment page appears. On the payment page there is a virtual account number, copy that number.
+5. Go to https://simulator.sandbox.midtrans.com/bca/va/index then paste the virtual account number then click Inquire and click pay. This website is used to simulate BCA virtual bank account payments. Apart from using the VA BCA payment simulator, you can make payments in the following simulators:
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+- GoPay QRIS Simulator: https://simulator.sandbox.midtrans.com/gopay/ui/index
+- BRI VA Simulator: https://simulator.sandbox.midtrans.com/openapi/va/index?bank=bri
+- BNI VA Simulator: https://simulator.sandbox.midtrans.com/bni/va/index
 
-## Learn More
+6. Return to the payment page, wait a few moments until a successful payment notification appears, then the page will redirect to another page with the message "Thank you for submitting your registration confirmation has been sent to your email".
+7. The final step, check your email as entered in the registration form. You will receive an email from a sender named noreplyr35@gmail.com with the message "Your payment with order-Id XYZ-XXXXXXXXXXXX has been successful!".
 
-To learn more about Next.js, take a look at the following resources:
+For more details, how this application works and is used will be shown in the video that I posted on my linkedin: https://www.linkedin.com/feed/update/urn:li:activity:7110686654562004992/
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+# Technical Documentation References :
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+- https://docs.midtrans.com/reference/quick-start-1
+- https://www.npmjs.com/package/midtrans-client
+- https://nodemailer.com/
+- https://www.npmjs.com/package/midtrans-client
+- https://www.npmjs.com/package/validatorjs
+- https://tailwindcomponents.com/cheatsheet/
 
-## Deploy on Vercel
+# Tutorial References :
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- https://www.udemy.com/course/nextjs-react-the-complete-guide/
+- https://www.youtube.com/watch?v=sXDwatqav6g&list=PLtHSjG_6PalpVZyjVuoA5fVzRXOr6tVcn
+- https://youtu.be/z3slaXqmkT0?list=PLFIM0718LjIUHFRMzPJ0wGjx9_NlC5d1h
+- https://youtu.be/VaNctBj6pLI?list=PLkd_KdFE7Ws6y-qAj_MlZh9jwVzG7P_0P
+- https://youtu.be/0OYTeObVClU
+- https://youtu.be/L46FwfVTRE0?list=PLkd_KdFE7Ws6y-qAj_MlZh9jwVzG7P_0P

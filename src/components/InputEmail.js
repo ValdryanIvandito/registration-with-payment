@@ -1,7 +1,7 @@
 export default function InputEmail(props) {
   function emailHandler(event) {
     const enteredEmail = event.target.value;
-    props.getEmail(enteredEmail)
+    props.getEmail(enteredEmail);
   }
 
   return (
